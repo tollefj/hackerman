@@ -1,5 +1,7 @@
 $(document).ready(function() {
-  $(".hackerman").trigger('play');
+  setTimeout(() => {
+    document.getElementByClassName('hackerman').play();
+  }, 200)
   $.getJSON("https://api.ipify.org?format=jsonp&callback=?",
     function(json) {
       $.getJSON('https://json.geoiplookup.io/'+json.ip, function(data) {
