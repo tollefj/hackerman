@@ -1,18 +1,42 @@
 @import url("https://fonts.googleapis.com/css?family=VT323");
+/* body { */
+/*   z-index: -100; */
+/*   background: #000; */
+/*   font-family: VT323, comic-sans; */
+/*   color: #044a0b; */
+/*   font-size: 35px; */
+/*   height: 100vh; */
+/* } */
+
 body {
-  z-index: -100;
-  background: #000;
-  font-family: VT323, comic-sans;
-  color: #044a0b;
-  font-size: 35px;
-  height: 100vh;
+    background:#000;
+    color: #00FF00;
+    margin:0;
+    font-family: VT323, comic-sans;
+    color: #044a0b;
+    font-size: 35px;
+    height: 100vh;
 }
 canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+    position:absolute;
+    top:0;
+    left:0;
 }
+.bars-and-stuff{
+    left:66.6%;
+}
+
+.output-console {
+    position:fixed;
+    overflow:hidden;
+}
+p{margin:0}
+/* canvas { */
+/*   position: absolute; */
+/*   top: 0; */
+/*   left: 0; */
+/*   right: 0; */
+/* } */
 main {
   margin: 0 auto;
   text-align: center;
@@ -24,7 +48,7 @@ main {
   color: #044a0b;
   font-size: 40px;
   height: 100px;
-  background: blue;
+  /* background: blue; */
   width: 50%;
   margin: 0 auto;
   border-radius: 500px;
@@ -34,21 +58,36 @@ main {
 }
 body {
 }
+@keyframes hax {
+  0% {}
+  50% { background: blue; }
+  100% { background: gold; }
+}
 #ip {
+  animation: hax .5s ease infinite;
   background: gold;
-  border-radius: 30px;
   padding: 0 20px;
 }
-#credit {
-  content: ;
-  position: fixed;
-  top: 0%;
-  right: 0;
-  color: #044a0b;
-  font-size: 40px;
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform:rotate(360deg);
+  }
 }
-#credit img {
+@keyframes increase {
+  100% {
+    transform: scale(1.1);
+  }
+}
+.outer-img {
+}
+img {
+  position: fixed;
+  animation: spin 3s ease infinite;
+  transition: transform 1s ease;
+  top: 20%;
+  right: 20%;
   display: block;
-  margin-left: 130px;
-  margin-top: 15px;
+  height: 400px;
+  width: 400px;
 }
